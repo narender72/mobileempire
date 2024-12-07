@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Table with Search</title>
+    <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>MOBILE EMPIRE</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search..." oninput="searchTable()">
+    </div>
+
+    <button class="btn btn-add" onclick="addRow()">Add New Row</button>
+    <button class="btn btn-save" onclick="saveData()">Save to File</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Bill No</th>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Aadhaar No</th>
+                <th>Phone Number</th>
+                <th>Model</th>
+                <th>IMEI</th>
+                <th>Serial No</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable">
+            <!-- Rows will be rendered here -->
+        </tbody>
+    </table>
+    <!-- <script src="/assets/js/script.js"></script> -->
+    <script src="main.js"></script>
+</body>
+</html>

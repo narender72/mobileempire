@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Entry Table with Search</title>
-    <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+    <title>Responsive Billing Form</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>MOBILE EMPIRE</h1>
+    <div class="container">
+        <h1>Billing Form</h1>
+        <form method="post" name="google-sheet">
+            <label for="billNo">Bill Number:</label>
+            <input type="text" id="billNo" name="BILL NO" placeholder="Enter Bill Number" required>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search..." oninput="searchTable()">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="DATE" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="NAME" placeholder="Enter Name" required>
+
+            <label for="aadhaar">Aadhaar Number:</label>
+            <input type="text" id="aadhaar" name="ADHAAR NO" placeholder="Enter Aadhaar Number" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="PHONE NO" placeholder="Enter Phone Number" required>
+
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="MODEL" placeholder="Enter Model" required>
+
+            <label for="imei">IMEI Number:</label>
+            <input type="text" id="imei" name="IMEI" placeholder="Enter IMEI Number" required>
+
+            <label for="serialNo">Serial Number:</label>
+            <input type="text" id="serialNo" name="SERIAL NO" placeholder="Enter Serial Number" required>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="PRICE" placeholder="Enter Price" required>
+
+            <input type="submit" value="Submit">
+        </form>
     </div>
-
-    <button class="btn btn-add" onclick="addRow()">Add New Row</button>
-    <button class="btn btn-save" onclick="saveData()">Save to File</button>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Bill No</th>
-                <th>Date</th>
-                <th>Name</th>
-                <th>Aadhaar No</th>
-                <th>Phone Number</th>
-                <th>Model</th>
-                <th>IMEI</th>
-                <th>Serial No</th>
-                <th>Price</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody id="dataTable">
-            <!-- Rows will be rendered here -->
-        </tbody>
-    </table>
-    <!-- <script src="/assets/js/script.js"></script> -->
     <script src="main.js"></script>
 </body>
 </html>
